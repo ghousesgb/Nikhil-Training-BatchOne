@@ -19,4 +19,14 @@ class MyDataSource: NSObject {
         "Coffee",
         "Mineral Water"
     ]
+    let menuPrice:[String] = [
+        "1299",
+        "1099",
+        "1499",
+        "899",
+        "59",
+        "199",
+        "19",
+        "99"
+    ]
 }
