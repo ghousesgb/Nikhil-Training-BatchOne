@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, UITableViewDataSource {
+class HomeViewController: UIViewController {
     var mTitleString:String!
     @IBOutlet weak var mWelcomeLabel: UILabel!
     @IBOutlet weak var mMenuIItemsLabel: UILabel!
@@ -21,31 +21,40 @@ class HomeViewController: UIViewController, UITableViewDataSource {
         mMenuIItemsLabel.text = menus.joined(separator: "\n\n")
         print(menus)
     }
+    @IBAction func logoutButtonAction(_ sender: UIButton) {
+        
+        let actionView = UIAlertController.init(title: "Logout", message: "Are you sure?", preferredStyle: .actionSheet)
+        let yesAction = UIAlertAction (title: "Yes", style: .destructive) { (UIAlertAction) in
+            UserDefaults.standard.setValue(nil, forKey: "username")
+            let landingScreen = UIStoryboard(name: "Main", bundle:nil).instantiateViewController(withIdentifier: "LandingScreen")
+            let appDelegate = (UIApplication.shared.delegate as! AppDelegate)
+            appDelegate.window?.rootViewController = landingScreen
+        }
+        let noAction  = UIAlertAction (title: "No", style: .default, handler: nil)
+       
+        actionView.addAction(yesAction)
+        actionView.addAction(noAction)
+        present(actionView, animated: true, completion: nil)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-      return menus.count
-    }
+}
 
+extension HomeViewController: UITableViewDataSource {
+    
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return menus.count
+    }
+    
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-      let menuCell = tableView.dequeueReusableCell(withIdentifier: "menuCell", for: indexPath)
+        let menuCell = tableView.dequeueReusableCell(withIdentifier: "menuCell", for: indexPath)
         menuCell.textLabel?.text        = menus[indexPath.row]
         menuCell.detailTextLabel?.text  = menuPrice[indexPath.row]
-    return menuCell
+        return menuCell
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }

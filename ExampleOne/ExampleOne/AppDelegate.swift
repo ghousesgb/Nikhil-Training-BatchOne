@@ -14,7 +14,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        let username = UserDefaults.standard.object(forKey: "username")
+        if(username != nil) {
+            
+            let homeVC = UIStoryboard(name: "Main", bundle:nil).instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+
+            homeVC.mTitleString = username as! String!
+            
+            let appDelegate = (UIApplication.shared.delegate as! AppDelegate)
+            appDelegate.window?.rootViewController = homeVC
+        }
+        
+        
+        
         return true
     }
 

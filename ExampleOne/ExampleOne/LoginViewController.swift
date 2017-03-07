@@ -26,9 +26,13 @@ class LoginViewController: UIViewController {
         if password == "1234" {
             mMessageLabel.text = "WELCOME"
             
+            UserDefaults.standard.setValue(username, forKey: "username")
+            
             let homeVC  =   self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
             homeVC.mTitleString = username
-            self.navigationController?.pushViewController(homeVC, animated: true)
+            
+            let appDelegate = (UIApplication.shared.delegate as! AppDelegate)
+            appDelegate.window?.rootViewController = homeVC
             
         }else {
             mPasswordTextField.text = ""
