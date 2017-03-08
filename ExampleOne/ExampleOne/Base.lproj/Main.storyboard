@@ -18,10 +18,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L6N-jV-HIW">
-                                <frame key="frameInset" minX="39" minY="282" width="160" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L6N-jV-HIW">
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="ekN-Xh-FYi"/>
+                                </constraints>
                                 <state key="normal" title="Sign Up">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -29,10 +30,11 @@
                                     <segue destination="bkA-oc-nZZ" kind="show" id="BxJ-Ei-rzg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oAW-ej-6W4">
-                                <frame key="frameInset" minX="39" minY="342" width="336" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oAW-ej-6W4">
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="goR-p3-VfR"/>
+                                </constraints>
                                 <state key="normal" title="Terms and Conditions">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -40,9 +42,7 @@
                                     <segue destination="xZ7-y6-7ud" kind="show" id="asn-8f-Fwg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P2r-PM-dD9">
-                                <frame key="frameInset" minX="215" minY="282" width="160" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P2r-PM-dD9">
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Sign In">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -51,14 +51,32 @@
                                     <segue destination="H1h-lW-wJ3" kind="show" id="1Yo-Wz-fkf"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Accelrys" translatesAutoresizingMaskIntoConstraints="NO" id="nQH-fo-oVH"/>
                         </subviews>
-                        <color key="backgroundColor" red="0.66274509800000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oAW-ej-6W4" firstAttribute="leading" secondItem="L6N-jV-HIW" secondAttribute="leading" id="2eZ-4n-52I"/>
+                            <constraint firstItem="L6N-jV-HIW" firstAttribute="top" secondItem="nQH-fo-oVH" secondAttribute="bottom" constant="8" symbolic="YES" id="35G-GR-Qu9"/>
+                            <constraint firstAttribute="trailing" secondItem="nQH-fo-oVH" secondAttribute="trailing" id="4el-xg-PAI"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="oAW-ej-6W4" secondAttribute="bottom" constant="8" symbolic="YES" id="5Xz-Wb-h4K"/>
+                            <constraint firstAttribute="trailing" secondItem="oAW-ej-6W4" secondAttribute="trailing" constant="20" symbolic="YES" id="8gd-1t-V68"/>
+                            <constraint firstItem="nQH-fo-oVH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="HpH-bk-AEv"/>
+                            <constraint firstItem="oAW-ej-6W4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="NgK-qT-mvz"/>
+                            <constraint firstItem="oAW-ej-6W4" firstAttribute="top" secondItem="P2r-PM-dD9" secondAttribute="bottom" constant="8" symbolic="YES" id="PN1-Au-vUJ"/>
+                            <constraint firstItem="oAW-ej-6W4" firstAttribute="trailing" secondItem="P2r-PM-dD9" secondAttribute="trailing" id="S20-v8-R6R"/>
+                            <constraint firstItem="P2r-PM-dD9" firstAttribute="height" secondItem="L6N-jV-HIW" secondAttribute="height" id="XTU-lE-71T"/>
+                            <constraint firstItem="P2r-PM-dD9" firstAttribute="leading" secondItem="L6N-jV-HIW" secondAttribute="trailing" constant="8" symbolic="YES" id="cG2-ec-0tV"/>
+                            <constraint firstItem="P2r-PM-dD9" firstAttribute="width" secondItem="L6N-jV-HIW" secondAttribute="width" id="l7H-Ti-0Ix"/>
+                            <constraint firstItem="nQH-fo-oVH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="sY1-pQ-12Q"/>
+                            <constraint firstItem="oAW-ej-6W4" firstAttribute="top" secondItem="L6N-jV-HIW" secondAttribute="bottom" constant="8" symbolic="YES" id="u5D-7N-DCK"/>
+                            <constraint firstItem="nQH-fo-oVH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zCe-Sp-KrE"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="WELCOME" id="02a-1k-3m8"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1664.8" y="-46.326836581709152"/>
+            <point key="canvasLocation" x="1771.0144927536232" y="-46.467391304347828"/>
         </scene>
         <!--Terms And Condition View Controller-->
         <scene sceneID="ZSr-sN-Hrs">
@@ -96,7 +114,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BkL-Za-jXo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2424.6376811594205" y="34.239130434782609"/>
+            <point key="canvasLocation" x="2464" y="-46"/>
         </scene>
         <!--Sign Up-->
         <scene sceneID="Qgv-vo-KF5">
@@ -344,4 +362,7 @@
             <point key="canvasLocation" x="725.60000000000002" y="-46.326836581709152"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Accelrys" width="205" height="166"/>
+    </resources>
 </document>
