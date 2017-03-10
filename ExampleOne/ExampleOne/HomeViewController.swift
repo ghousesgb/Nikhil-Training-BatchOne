@@ -9,9 +9,12 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    
     var mTitleString:String!
+    
     @IBOutlet weak var mWelcomeLabel: UILabel!
     @IBOutlet weak var mMenuIItemsLabel: UILabel!
+    
     let menus       = MyDataSource().menuNames
     let menuPrice   = MyDataSource().menuPrice
     
