@@ -154,19 +154,101 @@ print("Value is \(findingSum(x: findingSum(x: 1.1, y: 2.2), y: findingSum(x: 12.
 */
 
 // Optionals
+/*
 var AString : String   // String
 var BString : String? //(String Optional)
 AString = "Anjali"
 BString = "Hema"
 print(AString)
-//print(BString!) // Force Unwrap
+//print(BString!) //Force Unwrap, we should be careful, that optionals are not nil, if so (nil) app get crashed
 
 if BString != nil {
     print(BString!) // Safe Unwrap
 }
 
-if let BString = BString {
+if let BString = BString { // Shaowding
     print(BString)
 }
+//guard is also used to deal with the optionals
+*/
+
+// ==============================================  13 Mar 2017 ========================================
+
+let grade1 = 4
+let grade2 = 3
+let grade3 = 5
+
+let average = Double(grade1 + grade2 + grade3) / 3.0
+
+// Array
+// An Array is an ordered collection that stores multiple values of the same type. that means that an array of Int. it can only store INt values
+//syntax <var/let> <array_name>: [<datatype>]
+//example var grade:[Int]
+var g : Int = 10
+var grade:[Int] = [4,3,5]
+var exper:[Double] = [1.2, 1.5, 2.1, 3]
+
+var moviesToWatch:[String] = [] // Empty Array
+var studentNames: [String] = [
+        "🙏🏻",
+        "Satyendra",
+        "Vinay",
+        "Harsha",
+        "Poorna",
+        "Pramod",
+        "❤️"]
+studentNames.count
+
+//Index is used to represent the array elements, and index will start from 0 and end with array count - 1
+//Loops are used to display array elements easily
+studentNames[0]
+studentNames[1]
+studentNames[2]
+studentNames[studentNames.count-1]
+
+//append is used to add elements to array (add at end)
+studentNames.append("Ghouse")
+
+//insert is used to add an element in a specified index  insert(at:)
+
+studentNames.insert("Nikil", at: 7)
+
+//remove is used to remove element in a array
+studentNames.remove(at: 6)
+
+//Change the contents of the array
+studentNames[7] = "Shaik"
+
+//Old Way
+for index in 0...studentNames.count-1 {
+    print("Hello \(studentNames[index]) is at \(index)")
+}
+
+//New Way
+for name in studentNames {
+    print("Hello \(name)")
+}
+
+//copy behavior
+//Swift in Array are implemented as structures, that means arrays are copied when they are assigned to a new contant or variable
+var numbers = [17, 122, 73, 9, 10, 20]
+var otherNumber = numbers
+otherNumber.append(4)
+
+//Find Max in the given numbers
+var maxVal = numbers[0]
+
+for val in numbers {
+    if(maxVal > val ) {
+        maxVal = val
+    }
+}
+print("Max Value is \(maxVal)")
+
+//Find sum of all odd number and even number in the given array and try to find max of even number, max of odd number
+//Sort the given array in a order.
+var manyElements:[Int] = [1, 4, 5, 39, 59, 66, 12 , 7, 19, 67]
+
+
 
 
