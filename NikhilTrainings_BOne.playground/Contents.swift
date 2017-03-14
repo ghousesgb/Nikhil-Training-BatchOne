@@ -173,7 +173,7 @@ if let BString = BString { // Shaowding
 */
 
 // ==============================================  13 Mar 2017 ========================================
-
+/*
 let grade1 = 4
 let grade2 = 3
 let grade3 = 5
@@ -244,11 +244,125 @@ for val in numbers {
     }
 }
 print("Max Value is \(maxVal)")
+*/
 
+// ==============================================  14 Mar 2017 === Tuesday === ==================================
+
+var manyElements:[Int] = [12, 4, 5, 39, 59, 66, 12 , 7, 19, 7]
 //Find sum of all odd number and even number in the given array and try to find max of even number, max of odd number
-//Sort the given array in a order.
-var manyElements:[Int] = [1, 4, 5, 39, 59, 66, 12 , 7, 19, 67]
+var sumOdd  = 0
+var sumEven = 0
+var maxEven = manyElements[0]
+var maxOdd  = manyElements[0]
 
+for value in manyElements {
+    if value % 2 == 0 {         // % - Mod - Remainder
+        sumEven += value        // sumEven = sumEven + value
+        if(value<maxEven) {
+            maxEven = value
+        }
+    }else {
+        sumOdd  += value
+        if(value<maxOdd) {
+            maxOdd = value
+        }
+    }
+}
 
+print("Sum of all Even numbers : \(sumEven)")
+print("Sum of all Odd  numbers : \(sumOdd)")
 
+print("Max Even number : \(maxEven)")
+print("Max Odd  number : \(maxOdd)")
+
+//Sort the given array in a order. (Students Task)
+
+// RECURSION
+// A Funciton that calls itself is called a recursive function. Resursive solutions usually have less code and are more elegant
+// that iterative equivalents.
+// Example
+/*
+func printNumbers(3 : Int) {
+    if(3 > 1) {
+        printNumbers(N : 3-1)
+    }
+    print(3)
+}
+func printNumbers(2 : Int) {
+    if(2 > 1) {
+        printNumbers(N : 2-1)
+    }
+    print(2)
+}
+func printNumbers(1 : Int) {
+    if(1 > 1) {
+        printNumbers(N : 1-1)
+    }
+    print(1)
+}*/
+// Printing First N numbers
+func printNumbers(N : Int) {
+    if(N > 1) {
+        printNumbers(N : N-1)
+    }
+    print(N)
+}
+printNumbers(N: 10)
+
+// Finding Factorial
+// 5! = 5 * 4 * 3 * 2 * 1 = 120
+
+func factorial (N : Int) -> Int {
+    if(N == 1) {
+        return 1
+    } else {
+        return N * factorial(N: N-1)
+    }
+}
+var f = 7
+print("Fact of \(f) is \(factorial(N: f)) ")
+
+// Find Power function power(2,3) = 8
+/*
+func power(2 : Int, 3 : Int) -> Int {
+    if 3 == 0 {
+        return 1
+    }else {
+        return 2 * power(base: 2, exp: 2)
+    }
+}
+func power(2 : Int, 2 : Int) -> Int {
+    if 2 == 0 {
+        return 1
+    }else {
+        return 2 * power(base: 2, exp: 1)
+    }
+}
+func power(2 : Int, 1 : Int) -> Int {
+    if 1 == 0 {
+        return 1
+    }else {
+        return 2 * power(base: 2, exp: 0)
+    }
+}
+func power(2 : Int, 0 : Int) -> Int {
+    if 0 == 0 {
+        return 1
+    }else {
+        return 2 * power(base: 2, exp: 0)
+    }
+}*/
+
+func power(base : Int, exp : Int) -> Int {
+    if exp == 0 {
+        return 1
+    }else {
+        return base * power(base: base, exp: exp - 1)
+    }
+}
+
+var base = 2
+var exp  = 3
+
+print("power(\(base),\(exp)) is \(power(base: base, exp: exp))")
 
