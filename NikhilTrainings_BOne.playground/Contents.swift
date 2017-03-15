@@ -303,11 +303,11 @@ func printNumbers(1 : Int) {
 // Printing First N numbers
 func printNumbers(N : Int) {
     if(N > 1) {
-        printNumbers(N : N-1)
+        printNumbers(N-1)
     }
     print(N)
 }
-printNumbers(N: 10)
+printNumbers(10)
 
 // Finding Factorial
 // 5! = 5 * 4 * 3 * 2 * 1 = 120
@@ -316,11 +316,11 @@ func factorial (N : Int) -> Int {
     if(N == 1) {
         return 1
     } else {
-        return N * factorial(N: N-1)
+        return N * factorial(N-1)
     }
 }
 var f = 7
-print("Fact of \(f) is \(factorial(N: f)) ")
+print("Fact of \(f) is \(factorial(f)) ")
 
 // Find Power function power(2,3) = 8
 /*
@@ -357,12 +357,73 @@ func power(base : Int, exp : Int) -> Int {
     if exp == 0 {
         return 1
     }else {
-        return base * power(base: base, exp: exp - 1)
+        return base * power(base, exp: exp - 1)
     }
 }
-
 var base = 2
 var exp  = 3
 
-print("power(\(base),\(exp)) is \(power(base: base, exp: exp))")
+print("power(\(base),\(exp)) is \(power(base, exp: exp))")
+
+// ==============================================  15 Mar 2017 === Wednesday === ==================================
+// Closures are self contained chunks of code that can eb passed around and used in your code. 
+// Closures can capture and store references to any constants or variables 
+// Declaring a closure
+// {(parameters) -> return type in
+//   statements // condition
+// }
+// Simple closure that has no parameters and return a string
+
+var sayHello : () -> String = {
+    return "Hello Friends, Good Evening!"
+}
+sayHello()
+
+// a closure with one parameter of Int and return an Int
+var salary : (Int) -> Int = { month in
+    if(month == 4 || month == 5) {
+        return 0
+    }
+    return 23500
+}
+salary(5)
+
+var newSalary = salary
+newSalary(3)
+
+var numbers = [1, 18, 11, 4, 2, 9, 0]
+numbers.sort() // sort is a closure for an array type
+numbers.sort()
+
+// Tuples is a group of zero or more values represented as one value
+// For example ("Ghouse", "Basha") holds the first and last name of a person. to access inner values use dot (.) notation followed by the index
+
+var faculty = ("Ghouse", "Basha" ,"Shaik")
+var firstName = faculty.0
+var lastName  = faculty.2
+
+//Named elements
+var student = (firstname : "Vinay", lastname : "Vedhulla")
+student.firstname
+
+var ghouse = (name : "Ghouse", age : 35, isMarried : true)
+var harsha = (name : "Harsha", age : 22, isMarried : false)
+ghouse.isMarried
+harsha.age
+
+//Creating a funcation to find both quotient and remainder
+
+func divMod(a : Int, b : Int) -> (quotient: Int, remainder: Int) {
+    return (a / b, a % b)
+}
+
+divMod(10, b: 3)
+divMod(5, b: 2)
+divMod(25, b: 5)
+
+//enum
+
+
+
+
 
