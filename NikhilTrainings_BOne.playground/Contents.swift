@@ -303,11 +303,11 @@ func printNumbers(1 : Int) {
 // Printing First N numbers
 func printNumbers(N : Int) {
     if(N > 1) {
-        printNumbers(N-1)
+        printNumbers(N: N-1)
     }
     print(N)
 }
-printNumbers(10)
+printNumbers(N: 10)
 
 // Finding Factorial
 // 5! = 5 * 4 * 3 * 2 * 1 = 120
@@ -316,11 +316,11 @@ func factorial (N : Int) -> Int {
     if(N == 1) {
         return 1
     } else {
-        return N * factorial(N-1)
+        return N * factorial(N: N-1)
     }
 }
 var f = 7
-print("Fact of \(f) is \(factorial(f)) ")
+print("Fact of \(f) is \(factorial(N: f)) ")
 
 // Find Power function power(2,3) = 8
 /*
@@ -357,13 +357,13 @@ func power(base : Int, exp : Int) -> Int {
     if exp == 0 {
         return 1
     }else {
-        return base * power(base, exp: exp - 1)
+        return base * power(base: base, exp: exp - 1)
     }
 }
 var base = 2
 var exp  = 3
 
-print("power(\(base),\(exp)) is \(power(base, exp: exp))")
+print("power(\(base),\(exp)) is \(power(base: base, exp: exp))")
 
 // ==============================================  15 Mar 2017 === Wednesday === ==================================
 // Closures are self contained chunks of code that can eb passed around and used in your code. 
@@ -417,11 +417,108 @@ func divMod(a : Int, b : Int) -> (quotient: Int, remainder: Int) {
     return (a / b, a % b)
 }
 
-divMod(10, b: 3)
-divMod(5, b: 2)
-divMod(25, b: 5)
+divMod(a: 10, b: 3)
+divMod(a: 5, b: 2)
+divMod(a: 25, b: 5)
 
-//enum
+// ==============================================  16 Mar 2017 === Thu === ==================================
+
+
+//An enumeration is a user-defined data type which consits of set of related values. 
+//keyword enum is used to define enumerated data types
+//Syntax:
+// enum <enum_name> {
+
+//}
+
+enum SwiftTopics {
+    case OOPS
+    case Closures
+    case enums
+    case functions
+    case Protocols
+}
+
+var age   : Int = 29
+var topic : SwiftTopics = .functions
+
+let roll = 29
+let newtopic = SwiftTopics.enums
+
+
+enum Climate {
+    case India
+    case America
+    case Africa
+    case Australia
+    case Kuwait
+}
+var season = Climate.India
+
+switch season {
+    case .India:
+    print("Hot")
+    
+    case .Africa:
+    print("Cold")
+    
+    case .Australia:
+    print("Moderate")
+    //fallthrough
+    case .America:
+    print("Snow Strom")
+    //fallthrough
+    default:
+    print("Not Predictable")
+}
+//break keyword is used to exit the switch...case
+//the code will execute the case which matches with the switch pattern
+//default will get executed when non of the cases are matched, 
+//each case should have break statement
+//fallthrough is used to continue the next case match
+
+
+
+//Enum with Associated Values
+enum Student {
+    case Name(String)
+    case Mark(Int,Int,Int)
+    case FeePaid(String, Double)
+}
+var studDetails = Student.Name("Satyendra")
+var studMarks   = Student.Mark(98, 97, 95)
+var studeFee    = Student.FeePaid("Dec", 2500)
+
+switch studeFee {
+    case .Name(let name):
+        print("Student Name : \(name)")
+    
+    case .Mark(let mt1, let mt2, let mt3):
+        print("Student Marks are : \(mt1), \(mt2) and \(mt3)")
+    
+    case .FeePaid(let month, let feeAmt):
+        print("Student Paided : \(feeAmt),for the month of \(month)")
+    
+    default:
+        print("Nothing to say")
+}
+
+//Enum with raw Values
+enum Month : Int {
+    case Jan = 1, Feb , Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec
+}
+let thisMonth = Month.Mar.rawValue
+
+//          Associated Values                                                 Raw Values
+//      1. Different DataTypes                                             1. Same DataTypes
+//      2. ex. enum("Apr", 2300.84)                                        2. enum (10,20,30)
+//      3. varies when declared each time                                  3. value for members is same
+
+
+// Structure and Class
+
+
+
 
 
 
