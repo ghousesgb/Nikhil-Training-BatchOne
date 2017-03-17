@@ -421,7 +421,7 @@ divMod(a: 10, b: 3)
 divMod(a: 5, b: 2)
 divMod(a: 25, b: 5)
 
-// ==============================================  16 Mar 2017 === Thu === ==================================
+// ============================  16 Mar 2017 === Thu === ==================================
 
 
 //An enumeration is a user-defined data type which consits of set of related values. 
@@ -510,12 +510,96 @@ enum Month : Int {
 let thisMonth = Month.Mar.rawValue
 
 //          Associated Values                                                 Raw Values
-//      1. Different DataTypes                                             1. Same DataTypes
+//================================================================================================
+//      1. Different DataTypes                                                  1. Same DataTypes
 //      2. ex. enum("Apr", 2300.84)                                        2. enum (10,20,30)
 //      3. varies when declared each time                                  3. value for members is same
 
+// =================  17 Mar 2017 === FRI === ==================================
+// Structure and Class are basic buildiing blocks
+// syntax :
+// class <class_name> {
+//    //properties
+//    //methods
+//}
+class Person {
+    var name : String = "" //Property
+    var age : Int = -1        //Property
+    func run()  {              // Method are nothing but, functions inside class/struct
+        print("Person can run")
+    }
+}
+struct House {
+    var streetNumber : String = "000"
+    var area : Int = -1
+    func upgrade() {
+        print("Searching for new address")
+    }
+}
 
-// Structure and Class
+var p = Person()
+// dot (.) operator is used to bind object and property/methods
+p.name = "Ghouse"
+p.age = 35
+p.run()
+
+var h = House()
+h.streetNumber = "111"
+h.area = 3
+h.upgrade()
+
+var h3 = h // h3 is copy by value, h3 is variable value
+h3.streetNumber = "333"
+h3.area = 5
+h
+
+var p3 = p //p3 is reference type
+p3.name = "Basha"
+p3.age = 36
+p
+
+let h5 = h3 // h5 is a constant value
+//h5 = h Error
+//h5.streetNumber = "222"
+
+let p5 = p // p5 is a constant reference
+//p5 = p //Error
+p5.name = "Raj"
+p
+// Struct is a Value Type                           Class is a Referrence Type
+
+// Struct let constant values does not allow to reassign and
+// Struct will not allow to change properties even it is var, since parent is constant
+
+// Class let reference values does not alllow to reassing but can chnage properties
+
+var A = 10
+var B = 3
+print("A = \(A), B = \(B)")
+
+    func MySwap( A : Int,  B : Int) {
+        var A = A
+        var B = B
+        A = A+B
+        B = A-B
+        A = A-B
+        print("in Function: A = \(A), B = \(B)")
+    }
+
+MySwap(A: A, B: B)
+print("A = \(A), B = \(B)")
+
+    func MyNewSwap( A : inout Int,  B : inout Int) {
+        A = A+B
+        B = A-B
+        A = A-B
+        print("in Function: A = \(A), B = \(B)")
+    }
+    MyNewSwap(A: &A,  B: &B)
+print("A = \(A), B = \(B)")
+
+
+
 
 
 
