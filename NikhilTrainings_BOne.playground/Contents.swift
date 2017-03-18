@@ -515,7 +515,7 @@ let thisMonth = Month.Mar.rawValue
 //      2. ex. enum("Apr", 2300.84)                                        2. enum (10,20,30)
 //      3. varies when declared each time                                  3. value for members is same
 
-// =================  17 Mar 2017 === FRI === ==================================
+// ===================================  17 Mar 2017 === FRI === ==================================
 // Structure and Class are basic buildiing blocks
 // syntax :
 // class <class_name> {
@@ -571,13 +571,13 @@ p
 // Struct let constant values does not allow to reassign and
 // Struct will not allow to change properties even it is var, since parent is constant
 
-// Class let reference values does not alllow to reassing but can chnage properties
+// Class let reference values does not alllow to reassign  but can chnage properties
 
 var A = 10
 var B = 3
 print("A = \(A), B = \(B)")
 
-    func MySwap( A : Int,  B : Int) {
+    func MySwap( A : Int,  B : Int) {  // VALUE TYPE
         var A = A
         var B = B
         A = A+B
@@ -589,7 +589,7 @@ print("A = \(A), B = \(B)")
 MySwap(A: A, B: B)
 print("A = \(A), B = \(B)")
 
-    func MyNewSwap( A : inout Int,  B : inout Int) {
+    func MyNewSwap( A : inout Int,  B : inout Int) { //REFERENCE TYPE
         A = A+B
         B = A-B
         A = A-B
@@ -598,13 +598,69 @@ print("A = \(A), B = \(B)")
     MyNewSwap(A: &A,  B: &B)
 print("A = \(A), B = \(B)")
 
+// =================  18 Mar 2017 === Sat === ==================================
+/*
+ MRC: Manual Reference Counting
+ ARC: Automatic Reference Counting
+ Conditions (if...else)
+ Data Type (Int, Double, String)
+ Loops (for in)
+ Arrays [String] = ["Aero", "Box", "Candy"]
+ Functions
+ Recursions
+ Closures
+ Tuples 
+ Enums
+ Dictionaries [String : String] = {"name" : "Ghouse", "age" : "33", "address" : "Kadapa", "phone" : "383838"}
+JSON : JavaScript Object Notation (Chrome JSONView Extension)
+ 
+ A Dictionary is an unordered collection that stores multiple values of the same type, Each value from the dictionary is associated with a 
+ unique key. All the keys have the same type.
+ A Dictionary of type [String : Int] keys of string type and values are int type.
+ 
+ Declare Dictionary
+ */
+ var dictMonths : [String : Int] = [
+                                         "Jan"  :  1 ,
+                                         "Feb"  :  2 ,
+                                         "Mar"  :  3 ,
+                                         "Apr"  :  4 ,
+                                         "May"  :  5 ,
+                                         "Jun"  :  6 ,
+                                         "Jul"  :  7 ,
+                                         "Aug"  :  8 ,
+                                         "Sep"  :  9 ,
+                                         "Oct"  :  10 ,
+                                         "Nov"  :  11,
+                                         "Dec"  :  12
+                                    ]
+ var emptyDict: [Int : Int] = [:]
+ //Getting the values from the Dictionary
+dictMonths["Mar"]
+dictMonths["Dec"]
+dictMonths["aug"]
+
+for (key, value) in dictMonths {
+    print("Month \(key) number is \(value)")
+}
+print("No. of months \(dictMonths.count)") //count will give the number of key:values
+
+var NikilBatchOne : [String : String] = ["noofstudent" : "5", "dod" : "18mar2017"]
+var NikilBatchTwo = NikilBatchOne
+NikilBatchOne["dod"]
+NikilBatchOne["dod"] = "19mar2017"  //Update the values
+NikilBatchOne["dod"]
+NikilBatchTwo["dod"] // shows you 18mar2017, bcoz dictionaries are value types
 
 
-
-
-
-
-
-
-
-
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
