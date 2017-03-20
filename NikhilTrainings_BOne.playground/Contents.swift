@@ -602,6 +602,7 @@ print("A = \(A), B = \(B)")
 /*
  MRC: Manual Reference Counting
  ARC: Automatic Reference Counting
+ var, let
  Conditions (if...else)
  Data Type (Int, Double, String)
  Loops (for in)
