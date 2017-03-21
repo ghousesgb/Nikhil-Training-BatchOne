@@ -15,6 +15,7 @@
 		C882C6771E6CF25100C0F6B4 /* TermsAndConditionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C882C6761E6CF25100C0F6B4 /* TermsAndConditionViewController.swift */; };
 		C88E94AB1E6A578900C26AE6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88E94AA1E6A578900C26AE6 /* HomeViewController.swift */; };
 		C88E94AE1E6A5C2400C26AE6 /* MyDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88E94AD1E6A5C2400C26AE6 /* MyDataSource.swift */; };
+		C8C14C1D1E7FAD11006635EA /* ViewPropertiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C14C1C1E7FAD11006635EA /* ViewPropertiesViewController.swift */; };
 		C8FC8E371E67B0C200C4DC1A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FC8E361E67B0C200C4DC1A /* LoginViewController.swift */; };
 		C8FC8E391E67BAF300C4DC1A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FC8E381E67BAF300C4DC1A /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
@@ -30,6 +31,7 @@
 		C882C6761E6CF25100C0F6B4 /* TermsAndConditionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsAndConditionViewController.swift; sourceTree = "<group>"; };
 		C88E94AA1E6A578900C26AE6 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C88E94AD1E6A5C2400C26AE6 /* MyDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyDataSource.swift; path = Model/MyDataSource.swift; sourceTree = "<group>"; };
+		C8C14C1C1E7FAD11006635EA /* ViewPropertiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewPropertiesViewController.swift; sourceTree = "<group>"; };
 		C8FC8E361E67B0C200C4DC1A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C8FC8E381E67BAF300C4DC1A /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,6 +73,7 @@
 				C8FC8E381E67BAF300C4DC1A /* SignUpViewController.swift */,
 				C88E94AA1E6A578900C26AE6 /* HomeViewController.swift */,
 				C882C6761E6CF25100C0F6B4 /* TermsAndConditionViewController.swift */,
+				C8C14C1C1E7FAD11006635EA /* ViewPropertiesViewController.swift */,
 				C839B3001E66601B009AF19C /* Main.storyboard */,
 				C839B3031E66601B009AF19C /* Assets.xcassets */,
 				C839B3051E66601B009AF19C /* LaunchScreen.storyboard */,
@@ -163,6 +166,7 @@
 				C8FC8E371E67B0C200C4DC1A /* LoginViewController.swift in Sources */,
 				C839B2FF1E66601B009AF19C /* ViewController.swift in Sources */,
 				C8FC8E391E67BAF300C4DC1A /* SignUpViewController.swift in Sources */,
+				C8C14C1D1E7FAD11006635EA /* ViewPropertiesViewController.swift in Sources */,
 				C88E94AE1E6A5C2400C26AE6 /* MyDataSource.swift in Sources */,
 				C839B2FD1E66601B009AF19C /* AppDelegate.swift in Sources */,
 				C882C6771E6CF25100C0F6B4 /* TermsAndConditionViewController.swift in Sources */,
