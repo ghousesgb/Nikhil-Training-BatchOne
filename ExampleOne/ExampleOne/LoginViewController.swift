@@ -13,11 +13,13 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var mMessageLabel: UILabel!
     @IBOutlet weak var mUserNameTextField: UITextField!
     @IBOutlet weak var mPasswordTextField: UITextField!
+    @IBOutlet weak var mProfileImageView: UIImageView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        mProfileImageView.layer.cornerRadius = (mProfileImageView.frame.size.width / 2)
+        mProfileImageView.layer.masksToBounds = true
     }
     @IBAction func loginButtonAction(_ sender: UIButton) {
         let username = mUserNameTextField.text

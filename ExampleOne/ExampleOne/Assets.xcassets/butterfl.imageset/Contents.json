@@ -5,9 +5,23 @@
       "scale" : "1x"
     },
     {
+      "resizing" : {
+        "mode" : "9-part",
+        "center" : {
+          "mode" : "tile",
+          "width" : 121,
+          "height" : 72
+        },
+        "cap-insets" : {
+          "bottom" : 158,
+          "top" : 163,
+          "right" : 148,
+          "left" : 143
+        }
+      },
       "idiom" : "universal",
-      "scale" : "2x",
-      "filename" : "butterfl@2x.png"
+      "filename" : "butterfl@2x.png",
+      "scale" : "2x"
     },
     {
       "idiom" : "universal",

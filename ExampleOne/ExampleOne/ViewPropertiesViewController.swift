@@ -10,6 +10,7 @@ import UIKit
 
 class ViewPropertiesViewController: UIViewController {
 
+    @IBOutlet weak var popupView: UIView!
     @IBOutlet weak var welcomeLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +35,32 @@ class ViewPropertiesViewController: UIViewController {
     @IBAction func changeOrangeBGColorButtonAction(_ sender: UIButton) {
         view.backgroundColor = UIColor.orange
     }*/
+    /*@IBAction func showDetailsButtonAction(_ sender: UIButton) {
+        
+     //hidden property is not supported for animations
+     UIView.animate(withDuration: 1.5) {
+            self.popupView.isHidden = false
+        }
+        
+    }
+    @IBAction func continueButtonAction(_ sender: UIButton) {
+        UIView.animate(withDuration: 1.5) {
+            self.popupView.isHidden = true
+        }
+    }*/
+    
+    @IBAction func showDetailsButtonAction(_ sender: UIButton) {
+        UIView.animate(withDuration: 0.5) {
+            self.popupView.alpha = 1
+            self.popupView.layer.shadowOpacity = 1
+        }
+        
+    }
+    @IBAction func continueButtonAction(_ sender: UIButton) {
+        UIView.animate(withDuration:0.1) {
+            self.popupView.alpha = 0
+        }
+    }
     
     @IBAction func changeBGColorButtonAction(_ sender: UIButton) {
         
