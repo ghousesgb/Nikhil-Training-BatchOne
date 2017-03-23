@@ -15,13 +15,29 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var mPasswordTextField: UITextField!
     @IBOutlet weak var mProfileImageView: UIImageView!
     
+    @IBOutlet weak var usernameXConstraint: NSLayoutConstraint!
+    @IBOutlet weak var passwordXConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         mProfileImageView.layer.cornerRadius = (mProfileImageView.frame.size.width / 2)
         mProfileImageView.layer.masksToBounds = true
     }
+    
+
+    
     @IBAction func loginButtonAction(_ sender: UIButton) {
+        
+        if(usernameXConstraint.constant != 0) {
+            UIView.animate(withDuration: 1.5, delay: 1, options: [], animations: {
+                self.usernameXConstraint.constant = 0
+            }) { (true) in
+                self.passwordXConstraint.constant = 0
+            }
+        return
+        }
+        
+        
         let username = mUserNameTextField.text
         let password = mPasswordTextField.text
         //username == "INDIA" || username == "india") &&

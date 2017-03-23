@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C81F06441E835BB000A207A0 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81F06431E835BB000A207A0 /* PopupViewController.swift */; };
 		C839B2FD1E66601B009AF19C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C839B2FC1E66601B009AF19C /* AppDelegate.swift */; };
 		C839B2FF1E66601B009AF19C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C839B2FE1E66601B009AF19C /* ViewController.swift */; };
 		C839B3021E66601B009AF19C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C839B3001E66601B009AF19C /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C81F06431E835BB000A207A0 /* PopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 		C839B2F91E66601B009AF19C /* ExampleOne.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleOne.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C839B2FC1E66601B009AF19C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C839B2FE1E66601B009AF19C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				C88E94AA1E6A578900C26AE6 /* HomeViewController.swift */,
 				C882C6761E6CF25100C0F6B4 /* TermsAndConditionViewController.swift */,
 				C8C14C1C1E7FAD11006635EA /* ViewPropertiesViewController.swift */,
+				C81F06431E835BB000A207A0 /* PopupViewController.swift */,
 				C839B3001E66601B009AF19C /* Main.storyboard */,
 				C839B3031E66601B009AF19C /* Assets.xcassets */,
 				C839B3051E66601B009AF19C /* LaunchScreen.storyboard */,
@@ -167,6 +170,7 @@
 				C839B2FF1E66601B009AF19C /* ViewController.swift in Sources */,
 				C8FC8E391E67BAF300C4DC1A /* SignUpViewController.swift in Sources */,
 				C8C14C1D1E7FAD11006635EA /* ViewPropertiesViewController.swift in Sources */,
+				C81F06441E835BB000A207A0 /* PopupViewController.swift in Sources */,
 				C88E94AE1E6A5C2400C26AE6 /* MyDataSource.swift in Sources */,
 				C839B2FD1E66601B009AF19C /* AppDelegate.swift in Sources */,
 				C882C6771E6CF25100C0F6B4 /* TermsAndConditionViewController.swift in Sources */,
