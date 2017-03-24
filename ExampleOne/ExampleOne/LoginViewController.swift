@@ -24,18 +24,22 @@ class LoginViewController: UIViewController {
         mProfileImageView.layer.masksToBounds = true
     }
     
-
-    
-    @IBAction func loginButtonAction(_ sender: UIButton) {
-        
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         if(usernameXConstraint.constant != 0) {
             UIView.animate(withDuration: 1.5, delay: 1, options: [], animations: {
                 self.usernameXConstraint.constant = 0
             }) { (true) in
                 self.passwordXConstraint.constant = 0
             }
-        return
+            return
         }
+ 
+    }
+
+    
+    @IBAction func loginButtonAction(_ sender: UIButton) {
+        
         
         
         let username = mUserNameTextField.text
