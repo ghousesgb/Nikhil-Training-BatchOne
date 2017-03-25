@@ -22,6 +22,7 @@ class MyFavouritesViewController: UIViewController, UITableViewDataSource {
         super.viewDidLoad()
         mTableView.register(UITableViewCell.classForKeyedArchiver(), forCellReuseIdentifier:"xyz")
         mTableView.dataSource = self;
+       let window = UIApplication.shared.delegate?.window
     }
     
     public func numberOfSections(in tableView: UITableView) -> Int  {
