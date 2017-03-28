@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C832F6281E889D840089BD9F /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = C832F6271E889D840089BD9F /* File.swift */; };
 		C83866A91E85F57F0069E2DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83866A81E85F57F0069E2DE /* AppDelegate.swift */; };
 		C83866AB1E85F57F0069E2DE /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83866AA1E85F57F0069E2DE /* FirstViewController.swift */; };
 		C83866AD1E85F57F0069E2DE /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83866AC1E85F57F0069E2DE /* SecondViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C832F6271E889D840089BD9F /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = File.swift; path = Singleton/File.swift; sourceTree = "<group>"; };
 		C83866A51E85F57F0069E2DE /* DesignPattern.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignPattern.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C83866A81E85F57F0069E2DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C83866AA1E85F57F0069E2DE /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -41,6 +43,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C832F6261E889D560089BD9F /* Singleton */ = {
+			isa = PBXGroup;
+			children = (
+				C832F6271E889D840089BD9F /* File.swift */,
+			);
+			name = Singleton;
+			sourceTree = "<group>";
+		};
+		C832F6291E889F560089BD9F /* Utiliizes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Utiliizes;
+			sourceTree = "<group>";
+		};
 		C838669C1E85F57F0069E2DE = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +77,8 @@
 		C83866A71E85F57F0069E2DE /* DesignPattern */ = {
 			isa = PBXGroup;
 			children = (
+				C832F6291E889F560089BD9F /* Utiliizes */,
+				C832F6261E889D560089BD9F /* Singleton */,
 				C83866A81E85F57F0069E2DE /* AppDelegate.swift */,
 				C83866AA1E85F57F0069E2DE /* FirstViewController.swift */,
 				C83866AC1E85F57F0069E2DE /* SecondViewController.swift */,
@@ -146,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C83866BF1E85F9360069E2DE /* MyNotifications.swift in Sources */,
+				C832F6281E889D840089BD9F /* File.swift in Sources */,
 				C83866AD1E85F57F0069E2DE /* SecondViewController.swift in Sources */,
 				C83866A91E85F57F0069E2DE /* AppDelegate.swift in Sources */,
 				C83866AB1E85F57F0069E2DE /* FirstViewController.swift in Sources */,
@@ -309,6 +329,7 @@
 				C83866BB1E85F57F0069E2DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

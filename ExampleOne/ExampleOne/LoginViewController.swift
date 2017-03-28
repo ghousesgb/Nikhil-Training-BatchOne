@@ -34,14 +34,11 @@ class LoginViewController: UIViewController {
             }
             return
         }
- 
     }
 
     
     @IBAction func loginButtonAction(_ sender: UIButton) {
-        
-        
-        
+                
         let username = mUserNameTextField.text
         let password = mPasswordTextField.text
         //username == "INDIA" || username == "india") &&
