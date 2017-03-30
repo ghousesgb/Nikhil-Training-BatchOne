@@ -13,6 +13,8 @@
 		C832F6401E894CD10089BD9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C832F63F1E894CD10089BD9F /* Assets.xcassets */; };
 		C832F6431E894CD10089BD9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C832F6411E894CD10089BD9F /* LaunchScreen.storyboard */; };
 		C832F64C1E894CF60089BD9F /* ToDoItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = C832F64B1E894CF60089BD9F /* ToDoItems.swift */; };
+		C8464A2F1E8C8D0600274724 /* FriendsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8464A2E1E8C8D0600274724 /* FriendsList.swift */; };
+		C8464A311E8C8DC000274724 /* FriendsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8464A301E8C8DC000274724 /* FriendsListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		C832F6421E894CD10089BD9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C832F6441E894CD10089BD9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C832F64B1E894CF60089BD9F /* ToDoItems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ToDoItems.swift; path = Model/ToDoItems.swift; sourceTree = "<group>"; };
+		C8464A2E1E8C8D0600274724 /* FriendsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FriendsList.swift; path = Model/FriendsList.swift; sourceTree = "<group>"; };
+		C8464A301E8C8DC000274724 /* FriendsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,7 @@
 				C832F64A1E894CD90089BD9F /* Model */,
 				C832F6381E894CD10089BD9F /* AppDelegate.swift */,
 				C832F63A1E894CD10089BD9F /* ViewController.swift */,
+				C8464A301E8C8DC000274724 /* FriendsListViewController.swift */,
 				C832F63C1E894CD10089BD9F /* Main.storyboard */,
 				C832F63F1E894CD10089BD9F /* Assets.xcassets */,
 				C832F6411E894CD10089BD9F /* LaunchScreen.storyboard */,
@@ -71,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				C832F64B1E894CF60089BD9F /* ToDoItems.swift */,
+				C8464A2E1E8C8D0600274724 /* FriendsList.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -149,7 +155,9 @@
 			files = (
 				C832F63B1E894CD10089BD9F /* ViewController.swift in Sources */,
 				C832F6391E894CD10089BD9F /* AppDelegate.swift in Sources */,
+				C8464A311E8C8DC000274724 /* FriendsListViewController.swift in Sources */,
 				C832F64C1E894CF60089BD9F /* ToDoItems.swift in Sources */,
+				C8464A2F1E8C8D0600274724 /* FriendsList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,6 +317,7 @@
 				C832F6491E894CD10089BD9F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
