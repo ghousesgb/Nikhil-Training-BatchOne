@@ -6,4 +6,5 @@ target 'MyToDoList' do
   use_frameworks!
 
 pod "SwiftSpinner"
+pod 'IQKeyboardManagerSwift'
 end

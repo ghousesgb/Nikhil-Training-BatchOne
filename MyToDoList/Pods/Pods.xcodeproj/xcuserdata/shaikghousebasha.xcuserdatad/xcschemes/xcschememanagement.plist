@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>IQKeyboardManagerSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-MyToDoList.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>790E50A5D3852C727EC7C9C8BB49E6BA</key>
+		<key>08EE3D143D0EAD9072415F695AECB213</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F0B04301D01AB78AE07CCC5B5BF0FB67</key>
+		<key>1520003FEBEC114D6C84F832AFEDB994</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6A5A1870EF9A09F2E301DE1819361FF2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
