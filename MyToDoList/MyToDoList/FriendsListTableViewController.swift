@@ -30,6 +30,17 @@ class FriendsListTableViewController: UITableViewController {
         cell.detailTextLabel?.text =  friend.last_name
         return cell
     }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let friend = mFriendsList[indexPath.row]
+        performSegue(withIdentifier: "showDetails", sender: friend)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetails" {
+            let friendDetails = segue.destination as! FriendDetailsViewController
+            let friend = sender as! FriendsList
+            friendDetails.friend = friend
+        }
+    }
     @IBAction func nextButtonAction(_ sender: UIBarButtonItem?) {
         if(totalPage>=pageNo) {
             let urlWithPage = "https://reqres.in/api/users?page=\(pageNo)"

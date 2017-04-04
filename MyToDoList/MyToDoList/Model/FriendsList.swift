@@ -13,7 +13,9 @@ class FriendsList {
     var last_name   : String = ""
     var avatar      : String = ""
     
-   
+    init() {
+        
+    }
     init(fname : String, lname : String, favatar : String) {
         first_name  = fname
         last_name   = lname

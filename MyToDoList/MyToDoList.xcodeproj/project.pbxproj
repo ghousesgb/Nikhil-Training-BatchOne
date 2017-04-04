@@ -14,6 +14,9 @@
 		C83DBA0A1E89EE3E007F7BE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C83DBA091E89EE3E007F7BE0 /* Assets.xcassets */; };
 		C83DBA0D1E89EE3E007F7BE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C83DBA0B1E89EE3E007F7BE0 /* LaunchScreen.storyboard */; };
 		C83DBA161E89EEA0007F7BE0 /* ToDoItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83DBA151E89EEA0007F7BE0 /* ToDoItems.swift */; };
+		C8866D221E8E70A000B1C34E /* Courgette-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8866D211E8E70A000B1C34E /* Courgette-Regular.ttf */; };
+		C8866D241E8E70CE00B1C34E /* FriendDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8866D231E8E70CE00B1C34E /* FriendDetailsViewController.swift */; };
+		C8866D271E8E7AD200B1C34E /* Utilites.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8866D261E8E7AD200B1C34E /* Utilites.swift */; };
 		C8A65C6F1E8BDE7500B5D6AC /* FriendsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A65C6E1E8BDE7500B5D6AC /* FriendsList.swift */; };
 		C8A65C731E8BDF5700B5D6AC /* FriendsListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A65C721E8BDF5700B5D6AC /* FriendsListTableViewController.swift */; };
 /* End PBXBuildFile section */
@@ -29,6 +32,9 @@
 		C83DBA0C1E89EE3E007F7BE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C83DBA0E1E89EE3E007F7BE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C83DBA151E89EEA0007F7BE0 /* ToDoItems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ToDoItems.swift; path = Model/ToDoItems.swift; sourceTree = "<group>"; };
+		C8866D211E8E70A000B1C34E /* Courgette-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Courgette-Regular.ttf"; path = "Fonts/Courgette-Regular.ttf"; sourceTree = "<group>"; };
+		C8866D231E8E70CE00B1C34E /* FriendDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendDetailsViewController.swift; sourceTree = "<group>"; };
+		C8866D261E8E7AD200B1C34E /* Utilites.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utilites.swift; path = Utilites/Utilites.swift; sourceTree = "<group>"; };
 		C8A65C6E1E8BDE7500B5D6AC /* FriendsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FriendsList.swift; path = Model/FriendsList.swift; sourceTree = "<group>"; };
 		C8A65C721E8BDF5700B5D6AC /* FriendsListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsListTableViewController.swift; sourceTree = "<group>"; };
 		DF9AE59552806131451E12B4 /* Pods_MyToDoList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyToDoList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,10 +82,13 @@
 		C83DBA011E89EE3E007F7BE0 /* MyToDoList */ = {
 			isa = PBXGroup;
 			children = (
+				C8866D251E8E7ABD00B1C34E /* Utilites */,
+				C8866D1E1E8E706200B1C34E /* Fonts */,
 				C83DBA141E89EE4C007F7BE0 /* Model */,
 				C83DBA021E89EE3E007F7BE0 /* AppDelegate.swift */,
 				C83DBA041E89EE3E007F7BE0 /* ViewController.swift */,
 				C8A65C721E8BDF5700B5D6AC /* FriendsListTableViewController.swift */,
+				C8866D231E8E70CE00B1C34E /* FriendDetailsViewController.swift */,
 				C83DBA061E89EE3E007F7BE0 /* Main.storyboard */,
 				C83DBA091E89EE3E007F7BE0 /* Assets.xcassets */,
 				C83DBA0B1E89EE3E007F7BE0 /* LaunchScreen.storyboard */,
@@ -95,6 +104,22 @@
 				C8A65C6E1E8BDE7500B5D6AC /* FriendsList.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		C8866D1E1E8E706200B1C34E /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C8866D211E8E70A000B1C34E /* Courgette-Regular.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		C8866D251E8E7ABD00B1C34E /* Utilites */ = {
+			isa = PBXGroup;
+			children = (
+				C8866D261E8E7AD200B1C34E /* Utilites.swift */,
+			);
+			name = Utilites;
 			sourceTree = "<group>";
 		};
 		ED82055A184CAE6BDD4A50F4 /* Frameworks */ = {
@@ -169,6 +194,7 @@
 			files = (
 				C83DBA0D1E89EE3E007F7BE0 /* LaunchScreen.storyboard in Resources */,
 				C83DBA0A1E89EE3E007F7BE0 /* Assets.xcassets in Resources */,
+				C8866D221E8E70A000B1C34E /* Courgette-Regular.ttf in Resources */,
 				C83DBA081E89EE3E007F7BE0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -231,8 +257,10 @@
 				C83DBA051E89EE3E007F7BE0 /* ViewController.swift in Sources */,
 				C83DBA031E89EE3E007F7BE0 /* AppDelegate.swift in Sources */,
 				C8A65C731E8BDF5700B5D6AC /* FriendsListTableViewController.swift in Sources */,
+				C8866D241E8E70CE00B1C34E /* FriendDetailsViewController.swift in Sources */,
 				C83DBA161E89EEA0007F7BE0 /* ToDoItems.swift in Sources */,
 				C8A65C6F1E8BDE7500B5D6AC /* FriendsList.swift in Sources */,
+				C8866D271E8E7AD200B1C34E /* Utilites.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

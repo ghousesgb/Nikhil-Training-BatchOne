@@ -1,0 +1,15 @@
+PODS:
+  - moa (8.0.2)
+  - SwiftSpinner (1.1.0)
+
+DEPENDENCIES:
+  - moa (~> 8.0)
+  - SwiftSpinner
+
+SPEC CHECKSUMS:
+  moa: 73d2dd56fe838a31e255c64b7873d2c2fbc71076
+  SwiftSpinner: c03815614599b91eea46594bd52ba742849d0414
+
+PODFILE CHECKSUM: 80f066e4dc455b2024743bebba626b42ac2259a5
+
+COCOAPODS: 1.1.1
