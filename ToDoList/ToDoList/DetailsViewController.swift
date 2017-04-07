@@ -11,6 +11,7 @@ import UIKit
 class DetailsViewController: UIViewController {
 
     @IBOutlet weak var mFriendsFullName: UILabel!
+    @IBOutlet weak var mFriendsFullNameBG: UILabel!
     @IBOutlet weak var mFriendImageView: UIImageView!
     
     @IBOutlet weak var mAgeView: UIView!
@@ -25,6 +26,7 @@ class DetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         mFriendsFullName.text = mFriend.first_name + " " + mFriend.last_name
+        mFriendsFullNameBG.text = mFriendsFullName.text
         mFriendImageView.imageFromServerURL(urlString: mFriend.avatar)
         hideViews()
         mAgeView.isHidden = false
@@ -34,6 +36,7 @@ class DetailsViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     func hideViews() {
         mAgeView.isHidden = true
         mLooksView.isHidden = true
@@ -52,14 +55,14 @@ class DetailsViewController: UIViewController {
         default:
             mAgeView.isHidden = false
         }
-        
-        
     }
+    
     @IBAction func ageSteeperAction(_ sender: UIStepper) {
         
         mAgeLabel.text = "Age : \(sender.value.description)"
         
     }
+    
     @IBAction func looksSliderAction(_ sender: UISlider) {
         if sender.value >= 0.7 {
             mLooksLabel.text = "Handsome"
@@ -69,9 +72,6 @@ class DetailsViewController: UIViewController {
             mLooksLabel.text = "Ugly"
         }
     }
-    
-    
-    
     /*
     // MARK: - Navigation
 
@@ -81,5 +81,4 @@ class DetailsViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }

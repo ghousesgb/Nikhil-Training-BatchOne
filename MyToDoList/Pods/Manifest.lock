@@ -1,15 +1,18 @@
 PODS:
   - IQKeyboardManagerSwift (4.0.8)
+  - moa (8.0.2)
   - SwiftSpinner (1.1.0)
 
 DEPENDENCIES:
   - IQKeyboardManagerSwift
+  - moa (~> 8.0)
   - SwiftSpinner
 
 SPEC CHECKSUMS:
   IQKeyboardManagerSwift: c04bc9f68473823f825eb44d958fce98d921bead
+  moa: 73d2dd56fe838a31e255c64b7873d2c2fbc71076
   SwiftSpinner: c03815614599b91eea46594bd52ba742849d0414
 
-PODFILE CHECKSUM: 120e22529a80ab7ff55b2a79be8e441ae553fc94
+PODFILE CHECKSUM: 17a8da01171c145e49257d17c345f1c04e62b9e0
 
 COCOAPODS: 1.1.1

@@ -9,10 +9,10 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
     @IBOutlet weak var myTableView: UITableView!
+    @IBOutlet weak var mWebSiteTableView: UITableView!
     var mToDoList = [ToDoList]()
-    
+    let mWebSiteList = ["Google", "Yahoo", "Facebook", "Twitter"]
     override func viewDidLoad() {
         super.viewDidLoad()
         mToDoList = ToDoList.getData()
@@ -33,29 +33,41 @@ class ViewController: UIViewController {
 
 extension ViewController : UITableViewDataSource {
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return mToDoList.count
-    }
-
-    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell-todo", for: indexPath)
-        let item = mToDoList[indexPath.row]
-        cell.textLabel?.text = item.title
-        
-        let accessory : UITableViewCellAccessoryType = item.done ? .checkmark : .none
-        //Ternary Operator
-        // <condition> ? <if true> : <if flase>
-        // ? is like if
-        // : is like else
-        cell.accessoryType = accessory
-        
-       /* if indexPath.row % 2 == 0 {
-            cell.backgroundColor = UIColor.darkGray
+        if tableView == myTableView {
+            return mToDoList.count
         }else {
-            cell.backgroundColor = UIColor.lightGray
-        }*/
-        return cell
+            return mWebSiteList.count
+        }
+    }
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        if tableView == myTableView {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell-todo", for: indexPath)
+            let item = mToDoList[indexPath.row]
+            cell.textLabel?.text = item.title
+            
+            let accessory : UITableViewCellAccessoryType = item.done ? .checkmark : .none
+            //Ternary Operator
+            // <condition> ? <if true> : <if flase>
+            // ? is like if
+            // : is like else
+            cell.accessoryType = accessory
+            
+           /*if indexPath.row % 2 == 0 {
+                cell.backgroundColor = UIColor.darkGray
+            }else {
+                cell.backgroundColor = UIColor.lightGray
+            }*/
+            return cell
+        }else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell-website", for: indexPath)
+            let item = mWebSiteList[indexPath.row]
+            cell.textLabel?.text = item
+            return cell
+        }
     }
     public func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
         mToDoList.remove(at: indexPath.row)  // Deleting element from the array
         tableView.deleteRows(at: [indexPath], with: .automatic) // delete row from the tableview
     }
@@ -63,9 +75,13 @@ extension ViewController : UITableViewDataSource {
 
 extension ViewController : UITableViewDelegate {
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let item = mToDoList[indexPath.row]
-        item.done = !item.done // ! (Not)
-        tableView.reloadRows(at: [indexPath], with: .automatic)
+        if tableView == myTableView {
+            let item = mToDoList[indexPath.row]
+            item.done = !item.done // ! (Not)
+            tableView.reloadRows(at: [indexPath], with: .automatic)
+        }else {
+            UserDefaults.standard.setValue(mWebSiteList[indexPath.row], forKey: "WEB_SITE")
+        }
     }
 }
 

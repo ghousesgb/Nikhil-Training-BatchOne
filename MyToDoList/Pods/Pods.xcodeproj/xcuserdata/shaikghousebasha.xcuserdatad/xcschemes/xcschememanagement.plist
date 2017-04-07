@@ -19,10 +19,15 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>moa.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>08EE3D143D0EAD9072415F695AECB213</key>
+		<key>12AE6F4F21853FCA25FDC90D8C17C427</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -32,7 +37,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6A5A1870EF9A09F2E301DE1819361FF2</key>
+		<key>6750C011D7288F392E1A834E4C73B093</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A730CF239D60CACEC0B0AD5CCFD8C861</key>
 		<dict>
 			<key>primary</key>
 			<true/>

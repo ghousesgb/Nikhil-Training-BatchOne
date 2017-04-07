@@ -7,4 +7,6 @@ target 'ToDoList' do
 
  pod "SwiftSpinner"
  pod 'moa', '~> 8.0'
+ pod 'IQKeyboardManagerSwift'
+ 
 end

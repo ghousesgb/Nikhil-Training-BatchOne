@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>IQKeyboardManagerSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-ToDoList.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,12 +32,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>19EB45252E1A4643472FDFDEEDBF6BFB</key>
+		<key>1520003FEBEC114D6C84F832AFEDB994</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BB602BF109A1801BC62902A35F6A820D</key>
+		<key>4A83504C1F8F977498356F3F2CBAF0D0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9E545D7889EBA44FFA10E125CC215F73</key>
 		<dict>
 			<key>primary</key>
 			<true/>

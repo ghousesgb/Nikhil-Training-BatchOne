@@ -10,8 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
     var mToDoItems = [ToDoItems]()
-    
     @IBOutlet weak var myTableView: UITableView!
+    @IBOutlet weak var mWebSiteTableView: UITableView!
+    
+    let webSiteNames = ["Google","Facebook","Twitter","YouTube"]
+
     override func viewDidLoad() {
         super.viewDidLoad()
         mToDoItems = ToDoItems.getData()
@@ -33,29 +36,48 @@ class ViewController: UIViewController {
 
 extension ViewController : UITableViewDataSource {
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return mToDoItems.count
+        if tableView == myTableView {
+            return mToDoItems.count
+        }else {
+            return webSiteNames.count
+        }
     }
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell-todo", for: indexPath)
         
-        let item = mToDoItems[indexPath.row]
-        cell.textLabel?.text = item.title
-        
-        let accessory : UITableViewCellAccessoryType = item.done ? .checkmark : .none
-        cell.accessoryType = accessory
-        
-        return cell
+         if tableView == myTableView {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell-todo", for: indexPath)
+            
+            let item = mToDoItems[indexPath.row]
+            cell.textLabel?.text = item.title
+            
+            let accessory : UITableViewCellAccessoryType = item.done ? .checkmark : .none
+            cell.accessoryType = accessory
+            
+            return cell
+         }else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell-website", for: indexPath)
+            
+            let item = webSiteNames[indexPath.row]
+            cell.textLabel?.text = item
+            return cell
+        }
     }
     public func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        mToDoItems.remove(at: indexPath.row)
-        tableView.deleteRows(at: [indexPath], with: .top)
+         if tableView == myTableView {
+            mToDoItems.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .top)
+        }
     }
 }
 
 extension ViewController : UITableViewDelegate {
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let item = mToDoItems[indexPath.row]
-        item.done = !item.done
-        tableView.reloadRows(at: [indexPath], with: .automatic)
+         if tableView == myTableView {
+            let item = mToDoItems[indexPath.row]
+            item.done = !item.done
+            tableView.reloadRows(at: [indexPath], with: .automatic)
+         }else {
+            UserDefaults.standard.setValue(webSiteNames[indexPath.row], forKey: "WEB-SITE-NAME")
+        }
     }
 }

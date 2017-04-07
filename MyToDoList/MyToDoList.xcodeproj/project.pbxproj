@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		57F365D503EC926E24CE298D /* Pods_MyToDoList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF9AE59552806131451E12B4 /* Pods_MyToDoList.framework */; };
+		C807B4921E96674000708651 /* WebSiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C807B4911E96674000708651 /* WebSiteViewController.swift */; };
+		C807B4941E9676C400708651 /* AdsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C807B4931E9676C400708651 /* AdsViewController.swift */; };
 		C83DBA031E89EE3E007F7BE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83DBA021E89EE3E007F7BE0 /* AppDelegate.swift */; };
 		C83DBA051E89EE3E007F7BE0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83DBA041E89EE3E007F7BE0 /* ViewController.swift */; };
 		C83DBA081E89EE3E007F7BE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C83DBA061E89EE3E007F7BE0 /* Main.storyboard */; };
 		C83DBA0A1E89EE3E007F7BE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C83DBA091E89EE3E007F7BE0 /* Assets.xcassets */; };
 		C83DBA0D1E89EE3E007F7BE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C83DBA0B1E89EE3E007F7BE0 /* LaunchScreen.storyboard */; };
 		C83DBA161E89EEA0007F7BE0 /* ToDoItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83DBA151E89EEA0007F7BE0 /* ToDoItems.swift */; };
+		C86A11FC1E950B1B00FF274F /* CustomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86A11FB1E950B1B00FF274F /* CustomeViewController.swift */; };
 		C8866D221E8E70A000B1C34E /* Courgette-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8866D211E8E70A000B1C34E /* Courgette-Regular.ttf */; };
 		C8866D241E8E70CE00B1C34E /* FriendDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8866D231E8E70CE00B1C34E /* FriendDetailsViewController.swift */; };
 		C8866D271E8E7AD200B1C34E /* Utilites.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8866D261E8E7AD200B1C34E /* Utilites.swift */; };
@@ -24,6 +27,8 @@
 /* Begin PBXFileReference section */
 		588B740ECD5EB6C9B93DCF85 /* Pods-MyToDoList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyToDoList.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyToDoList/Pods-MyToDoList.release.xcconfig"; sourceTree = "<group>"; };
 		C17DBF7531549CD52F23B430 /* Pods-MyToDoList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyToDoList.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyToDoList/Pods-MyToDoList.debug.xcconfig"; sourceTree = "<group>"; };
+		C807B4911E96674000708651 /* WebSiteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSiteViewController.swift; sourceTree = "<group>"; };
+		C807B4931E9676C400708651 /* AdsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdsViewController.swift; sourceTree = "<group>"; };
 		C83DB9FF1E89EE3E007F7BE0 /* MyToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C83DBA021E89EE3E007F7BE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C83DBA041E89EE3E007F7BE0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -32,6 +37,7 @@
 		C83DBA0C1E89EE3E007F7BE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C83DBA0E1E89EE3E007F7BE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C83DBA151E89EEA0007F7BE0 /* ToDoItems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ToDoItems.swift; path = Model/ToDoItems.swift; sourceTree = "<group>"; };
+		C86A11FB1E950B1B00FF274F /* CustomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomeViewController.swift; sourceTree = "<group>"; };
 		C8866D211E8E70A000B1C34E /* Courgette-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Courgette-Regular.ttf"; path = "Fonts/Courgette-Regular.ttf"; sourceTree = "<group>"; };
 		C8866D231E8E70CE00B1C34E /* FriendDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendDetailsViewController.swift; sourceTree = "<group>"; };
 		C8866D261E8E7AD200B1C34E /* Utilites.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utilites.swift; path = Utilites/Utilites.swift; sourceTree = "<group>"; };
@@ -89,6 +95,9 @@
 				C83DBA041E89EE3E007F7BE0 /* ViewController.swift */,
 				C8A65C721E8BDF5700B5D6AC /* FriendsListTableViewController.swift */,
 				C8866D231E8E70CE00B1C34E /* FriendDetailsViewController.swift */,
+				C86A11FB1E950B1B00FF274F /* CustomeViewController.swift */,
+				C807B4911E96674000708651 /* WebSiteViewController.swift */,
+				C807B4931E9676C400708651 /* AdsViewController.swift */,
 				C83DBA061E89EE3E007F7BE0 /* Main.storyboard */,
 				C83DBA091E89EE3E007F7BE0 /* Assets.xcassets */,
 				C83DBA0B1E89EE3E007F7BE0 /* LaunchScreen.storyboard */,
@@ -259,8 +268,11 @@
 				C8A65C731E8BDF5700B5D6AC /* FriendsListTableViewController.swift in Sources */,
 				C8866D241E8E70CE00B1C34E /* FriendDetailsViewController.swift in Sources */,
 				C83DBA161E89EEA0007F7BE0 /* ToDoItems.swift in Sources */,
+				C86A11FC1E950B1B00FF274F /* CustomeViewController.swift in Sources */,
 				C8A65C6F1E8BDE7500B5D6AC /* FriendsList.swift in Sources */,
 				C8866D271E8E7AD200B1C34E /* Utilites.swift in Sources */,
+				C807B4921E96674000708651 /* WebSiteViewController.swift in Sources */,
+				C807B4941E9676C400708651 /* AdsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

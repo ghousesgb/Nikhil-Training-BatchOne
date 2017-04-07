@@ -13,7 +13,6 @@ class FriendDetailsViewController: UIViewController {
     @IBOutlet weak var mFriendImageView: UIImageView?
     @IBOutlet weak var mFriendFullName: UILabel?
     
-    @IBOutlet weak var mScrollView: UIScrollView!
     @IBOutlet weak var mInfoView: UIView!
     @IBOutlet weak var mLookView: UIView!
     @IBOutlet weak var mAgeView: UIView!
@@ -26,7 +25,7 @@ class FriendDetailsViewController: UIViewController {
         mFriendFullName?.text = friend.first_name + " " + friend.last_name
         hideViews()
         mAgeView.isHidden = false
-        mScrollView.contentSize = CGSize(width: mScrollView.frame.size.width, height: mScrollView.frame.size.height * 3)
+       
     }
 
     @IBAction func StepperAction(_ sender: UIStepper) {
