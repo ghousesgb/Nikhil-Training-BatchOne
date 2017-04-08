@@ -143,7 +143,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" fixedFrame="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m7z-zo-zeg">
-                                <frame key="frameInset" minX="-0.5" minY="64" maxX="0.5"/>
+                                <frame key="frameInset" minX="-1" minY="64" maxX="1"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
@@ -438,7 +438,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="f6m-VM-ivA" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="HL4-3X-xzp">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HL4-3X-xzp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -455,8 +455,12 @@
         <scene sceneID="tVb-0Z-TIb">
             <objects>
                 <viewController id="HK0-9N-c43" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GRO-nx-fzh"/>
+                        <viewControllerLayoutGuide type="bottom" id="uDX-7d-r7N"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="W8u-Nz-erV">
-                        <rect key="frame" x="0.0" y="0.0" width="413.5" height="60"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PKR-WX-qZh">
@@ -480,6 +484,6 @@
         <image name="loading" width="20" height="20"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="EML-ad-tBK"/>
+        <segue reference="fOm-U9-zpq"/>
     </inferredMetricsTieBreakers>
 </document>
